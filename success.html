@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're In — Leader Pittsburgh</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy:  #1A2B4C;
+    --blue:  #2980B9;
+    --amber: #E8A020;
+    --green: #27AE60;
+    --light: #EBF5FB;
+    --bg:    #F4F7FA;
+    --text:  #2C3E50;
+    --muted: #7F8C9A;
+    --border:#D5E3EE;
+    --mono:  'IBM Plex Mono', monospace;
+    --sans:  'IBM Plex Sans', sans-serif;
+  }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    max-width: 520px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .card-header {
+    background: var(--navy);
+    padding: 28px 32px;
+    text-align: center;
+  }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--amber);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 12px;
+  }
+  .checkmark {
+    width: 52px;
+    height: 52px;
+    background: var(--green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+  }
+  .checkmark svg {
+    width: 28px;
+    height: 28px;
+    stroke: #fff;
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .card-header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .card-header p {
+    font-size: 13px;
+    color: #AED6F1;
+  }
+  .card-body {
+    padding: 28px 32px;
+  }
+  .steps { list-style: none; margin-bottom: 24px; }
+  .steps li {
+    display: flex;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: flex-start;
+  }
+  .steps li:last-child { border-bottom: none; }
+  .step-num {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: var(--light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-top: 1px;
+  }
+  .step-content strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 3px;
+  }
+  .step-content p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .trial-note {
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--blue);
+    border-radius: 0 6px 6px 0;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+  }
+  .trial-note p {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .trial-note a {
+    color: var(--blue);
+    text-decoration: none;
+  }
+  .btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: opacity .15s;
+  }
+  .btn:hover { opacity: .88; }
+  .btn-primary { background: var(--navy); color: #fff; }
+  .btn-ghost {
+    background: transparent;
+    color: var(--navy);
+    border: 1px solid var(--border);
+    font-weight: 500;
+  }
+  .footer-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 20px;
+  }
+  .footer-note a { color: var(--blue); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="card">
+
+  <div class="card-header">
+    <div class="eyebrow">Pittsburgh Construction Intelligence</div>
+    <div class="checkmark">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h1>You're in.</h1>
+    <p>Your subscription is active. First report arrives tomorrow.</p>
+  </div>
+
+  <div class="card-body">
+
+    <ul class="steps">
+      <li>
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <strong>Tomorrow at 6:30am</strong>
+          <p>Your first daily report lands in your inbox — 6 pages covering fresh permit leads, ML neighborhood forecast, 12-week trend charts, and commercial jobs over $50K.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <strong>Check Page 2 first</strong>
+          <p>Yellow rows = no contractor on record. These are your highest-priority leads — call them before anyone else does.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <strong>Check Page 3 for the forecast</strong>
+          <p>Top 10 Pittsburgh neighborhoods predicted to have the highest permit activity over the next 4 weeks. Get ahead of the market, not just react to it.</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="trial-note">
+      <p>
+        <strong>Your 7-day free trial is active.</strong>
+        You won't be charged until day 8.
+        To cancel or manage your subscription at any time,
+        <a href="https://billing.stripe.com/p/login/YOUR_PORTAL_ID" id="portal-link">
+          visit your billing portal
+        </a>.
+      </p>
+    </div>
+
+    <a href="https://www.leaderpittsburgh.com" class="btn btn-primary">
+      Back to leaderpittsburgh.com
+    </a>
+    <a href="mailto:leader@leaderpittsburgh.com" class="btn btn-ghost">
+      Questions? Email Logan directly
+    </a>
+
+  </div>
+</div>
+
+<p class="footer-note">
+  Leader Pittsburgh Permit Leads &nbsp;·&nbsp;
+  <a href="https://www.leaderpittsburgh.com">leaderpittsburgh.com</a>
+</p>
+
+<script>
+  // If customer portal URL is passed as a query param, use it
+  // e.g. /success?portal=https://billing.stripe.com/...
+  const params = new URLSearchParams(window.location.search);
+  const portal = params.get('portal');
+  if (portal) {
+    document.getElementById('portal-link').href = portal;
+  }
+</script>
+
+</body>
+</html>
