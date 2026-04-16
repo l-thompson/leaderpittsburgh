@@ -419,6 +419,14 @@
   .pricing-section { background: var(--navy); color: #fff; }
   .pricing-section h2 { color: #fff; }
   .pricing-section .section-label { color: var(--accent); }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 740px;
+    margin: 0 auto 32px;
+  }
+  @media (max-width: 620px) { .pricing-grid { grid-template-columns: 1fr; } }
   .pricing-card {
     background: var(--navy2);
     border: 1px solid rgba(255,255,255,.12);
@@ -521,7 +529,15 @@
   @media (max-width: 600px) {
     .stat-item { padding: 18px 20px; }
     .stat-num { font-size: 22px; }
-    .pricing-card { padding: 28px 20px; }
+    .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 740px;
+    margin: 0 auto 32px;
+  }
+  @media (max-width: 620px) { .pricing-grid { grid-template-columns: 1fr; } }
+  .pricing-card { padding: 28px 20px; }
     section { padding: 48px 16px; }
   }
 </style>
@@ -840,22 +856,57 @@
     <p class="section-label">Pricing</p>
     <h2>Less than the margin on one job.</h2>
 
-    <div class="pricing-card">
-      <div class="price-amount">$199</div>
-      <div class="price-period">per month &nbsp;·&nbsp; billed monthly &nbsp;·&nbsp; cancel anytime</div>
-      <ul class="price-features">
-        <li>Daily 6-page PDF report delivered at 6:30am</li>
-        <li>Fresh leads — unassigned permits with no contractor on record</li>
-        <li>ML forecast — top 10 neighborhoods for next 4 weeks</li>
-        <li>12-week market trend charts per permit type</li>
-        <li>Commercial intelligence — top 15 jobs over $50K</li>
-        <li>Full 60-day reference list, all 7 permit types</li>
-        <li>Pittsburgh data only — local, specific, actionable</li>
-      </ul>
-      <a href="https://buy.stripe.com/5kQ00l3VP731aI2geY0RG00" class="btn-primary" style="width:100%;text-align:center;display:block;">
-        Start 7-Day Free Trial
-      </a>
-      <p class="trial-note">Credit card required. Cancel before day 7 and you're never charged.</p>
+    <div class="pricing-grid">
+
+      <!-- Monthly -->
+      <div class="pricing-card">
+        <p style="margin:0 0 6px;font-family:var(--mono);font-size:11px;color:#7AAFCC;
+                  text-transform:uppercase;letter-spacing:.08em;">Monthly</p>
+        <div class="price-amount">$199</div>
+        <div class="price-period">per month &nbsp;·&nbsp; billed monthly</div>
+        <ul class="price-features">
+          <li>Daily 6-page PDF at 6:30am</li>
+          <li>Unassigned leads — no contractor on record</li>
+          <li>ML forecast — top 10 neighborhoods</li>
+          <li>12-week trend charts per permit type</li>
+          <li>Commercial jobs over $50K flagged</li>
+          <li>Full 60-day reference list, all 7 types</li>
+        </ul>
+        <a href="https://buy.stripe.com/5kQ00l3VP731aI2geY0RG00"
+           class="btn-primary" style="width:100%;text-align:center;display:block;">
+          Start 7-Day Free Trial
+        </a>
+        <p class="trial-note">Cancel before day 7 — never charged.</p>
+      </div>
+
+      <!-- Annual — highlighted -->
+      <div class="pricing-card" style="border:2px solid var(--accent);position:relative;">
+        <div style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+                    background:var(--accent);color:var(--navy);font-size:11px;
+                    font-weight:700;padding:3px 14px;border-radius:20px;
+                    font-family:var(--mono);letter-spacing:.06em;white-space:nowrap;">
+          BEST VALUE
+        </div>
+        <p style="margin:0 0 6px;font-family:var(--mono);font-size:11px;color:#7AAFCC;
+                  text-transform:uppercase;letter-spacing:.08em;">Annual</p>
+        <div class="price-amount">$1,990</div>
+        <div class="price-period">per year &nbsp;·&nbsp; <strong style="color:var(--accent);">2 months free</strong></div>
+        <ul class="price-features">
+          <li>Everything in monthly</li>
+          <li>Save $398 vs monthly billing</li>
+          <li>$166/month effective rate</li>
+          <li style="border-bottom:none;padding-bottom:0;">&nbsp;</li>
+          <li style="border-bottom:none;padding-bottom:0;">&nbsp;</li>
+          <li style="border-bottom:none;padding-bottom:0;">&nbsp;</li>
+        </ul>
+        <a href="https://buy.stripe.com/test_cNi9AM0aP2OceaP4ko67S02"
+           class="btn-primary" style="width:100%;text-align:center;display:block;
+                                      background:var(--accent);color:var(--navy);">
+          Start 7-Day Free Trial
+        </a>
+        <p class="trial-note">Cancel before day 7 — never charged.</p>
+      </div>
+
     </div>
 
     <div class="vs-box">
@@ -946,7 +997,7 @@
     <p class="section-label">Get started</p>
     <h2>Your competitors check this tomorrow morning.</h2>
     <p>7-day free trial. No contract. Cancel anytime. Your first report arrives the morning after you sign up.</p>
-    <a href="https://buy.stripe.com/5kQ00l3VP731aI2geY0RG00" class="btn-primary" style="font-size:16px;padding:16px 40px;">
+    <a href="https://buy.stripe.com/test_14AaEQe1FbkI5EjbMQ67S01" class="btn-primary" style="font-size:16px;padding:16px 40px;">
       Start Your Free Trial
     </a>
     <p style="margin-top:16px;font-size:13px;color:var(--muted);">
